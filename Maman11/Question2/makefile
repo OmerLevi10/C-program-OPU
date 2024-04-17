@@ -1,16 +1,9 @@
-CC=gcc
-CFLAGS=-std=c99 -pedantic -Wall
-
-all: suffix_main
-
 suffix_main: suffix.o main.o
-	$(CC) $(CFLAGS) -o suffix_main suffix.o main.o
+	gcc -Wall -ansi -pedantic -o suffix.o main.o suffix_main
 
 suffix.o: suffix.c suffix.h
-	$(CC) $(CFLAGS) -c suffix.c
+	gcc -c -Wall -ansi -pedantic suffix.c
 
 main.o: main.c suffix.h
-	$(CC) $(CFLAGS) -c main.c
+	gcc -c -Wall -ansi -pedantic main.c
 
-clean:
-	rm -f suffix_main suffix.o main.o
