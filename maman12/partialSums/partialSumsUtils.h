@@ -35,4 +35,4 @@ int *handleInput(int *size);
  */
 void safeFree(int **ptr);
 
-#endif // PARTIALSUMSUTILS_H
+#endif /* PARTIALSUMSUTILS_H */
